@@ -15,7 +15,7 @@ function App() {
     formData.append("image", image);
 
     const result = await axios.post(
-      "http://localhost:5000/upload-image",
+      "https://img-backend-yv19.onrender.com/upload-image",
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },
@@ -29,7 +29,7 @@ function App() {
   };
 
   const getImage = async () => {
-    const result = await axios.get("http://localhost:5000/get-image");
+    const result = await axios.get("https://img-backend-yv19.onrender.com/get-image");
     console.log(result);
     setAllImage(result.data.data);
   };
